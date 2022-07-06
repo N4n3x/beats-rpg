@@ -1,5 +1,5 @@
 import { Application, Sprite } from 'pixi.js'
-import React, { useRef, useEffect, useLayoutEffect } from "react";
+import React, { useRef, useEffect, useLayoutEffect, RefObject } from "react";
 
 const app = new Application({
     width: 360,
@@ -14,9 +14,10 @@ function Game() {
 
     useLayoutEffect(() => {
         // On first render add app to DOM
-        if (ref.current !== null) {
-            ref.current.appendChild(app.view);
-        }
+        // if (ref.current !== null) {
+        //     ref.current.appendChild(app.view);
+        // }
+        ref.current!.appendChild(app.view);
         // Start the PixiJS app
         app.start();
     
