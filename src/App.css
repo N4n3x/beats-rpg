@@ -9,6 +9,6 @@
   flex-direction: row;
   align-items: center;
   /* justify-content: center; */
-  font-size: calc(1px + 0.6rem);
+  font-size: calc(1px + 0.5rem);
   color: white;
 }
