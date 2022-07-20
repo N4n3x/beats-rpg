@@ -10,6 +10,7 @@ function Game() {
         //     ref.current.appendChild(app.view);
         // }
         ref.current!.appendChild(App.view);
+        
         // Start the PixiJS app
         App.start();
     
