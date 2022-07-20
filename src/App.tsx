@@ -2,6 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Game from './components/game'
+import "../static/fonts/Minecraft.ttf";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -9,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>⚔️ BEATS RPG 🛡️</h1>
+        <h1 className='minecraft-font'>⚔️ BEATS RPG 🛡️</h1>
       </header>
       <Game />
     </div>

@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Minecraft";
+  src: local("Minecraft"),
+   url("../static/fonts/Minecraft.ttf") format("truetype");
+  font-weight: bold;
+  }
+
 .App {
   text-align: center;
 }
@@ -11,4 +18,11 @@
   /* justify-content: center; */
   font-size: calc(1px + 0.5rem);
   color: white;
+}
+
+.minecraft-font {
+  font-family: "Minecraft";
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 00.5rem;
 }
