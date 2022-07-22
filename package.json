@@ -1,11 +1,17 @@
 {
   "name": "beats-rpg",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "vite start",
+    "test": "vite test",
+    "lint": "vite lint",
+    "watch": "vite watch",
+    "serve": "vite serve",
+    "debug": "vite --port=4000"
   },
   "dependencies": {
     "pixi.js": "^6.4.2",
