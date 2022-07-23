@@ -1,39 +1,43 @@
-import { Application, Sprite, settings, SCALE_MODES, Graphics, Container, Spritesheet, BaseTexture, Loader, LoaderResource, Texture } from 'pixi.js'
-import buttonGenerator from './buttonGenerator';
-import windowGenerator from './windowGenerator';
-import startScreen from './startScreen';
+import { Application, IApplicationOptions, Sprite, settings, SCALE_MODES, Graphics, Container, Spritesheet, BaseTexture, Loader, LoaderResource, Texture } from 'pixi.js'
+import StartScreen from './startScreen';
+import BattleScreen from './battleScreen';
 
-const App = new Application({
-    width: 360,
-    height: 640,
-    antialias: true,
-    resolution: 1,
-});
-settings.SCALE_MODE = SCALE_MODES.NEAREST;
-App.loader.add("button", "../../static/assets/buttons_4x.json")
-    .add("fullBlackWindow", "../../static/assets/GUI_4x.json")
-    .load(setup);
-App.loader.load(setup);
-
-function setup(loader: Loader){
-    const startScreenContainer = startScreen(App, loader);
-    // const headerContainer = new Container();
-    App.stage.addChild(startScreenContainer);
-
-    // const windowContainer = windowGenerator("fullBlack", 9, 16,loader);
-    // headerContainer.addChild(windowContainer);
-    // windowContainer.x = App.screen.width / 2 - windowContainer.width / 2;
-    // windowContainer.y = 70;
+interface IGameService extends Application {
+    router: (screen: string) => void;
+}
+class GameService extends Application {
+    constructor(options: IApplicationOptions) {
+        super(options);
+    }
     
-
-    // const buttonContainer = buttonGenerator("small", menuAction, "14", loader);
-    // headerContainer.addChild(buttonContainer);
-    // buttonContainer.x = headerContainer.x + 1;
-    // buttonContainer.y = headerContainer.y + 1;
+    public router(screenName: string): void{
+        this.stage.removeChildren();
+        switch(screenName){
+            case "startScreen":
+                const startScreenContainer = StartScreen(this);
+                this.stage.addChild(startScreenContainer);
+                break;
+            case "battleScreen":
+                const battleScreenContainer = BattleScreen(this);
+                this.stage.addChild(battleScreenContainer);
+                break;
+        }
+    }
 }
 
-function menuAction(): void{
-    console.log("menuAction");
-}
+// const App = new GameService({
+//     width: 360,
+//     height: 640,
+//     antialias: true,
+//     resolution: 1,
+// });
+// // settings.SCALE_MODE = SCALE_MODES.NEAREST;
+// App.loader.add("button", "../../static/assets/buttons_4x.json")
+//     .add("fullBlackWindow", "../../static/assets/GUI_4x.json")
+//     .load(start);
 
-export default App;
+// function start(): void{ 
+//     App.router("startScreen");
+// }
+
+export default GameService;
