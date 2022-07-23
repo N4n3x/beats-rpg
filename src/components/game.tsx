@@ -10,7 +10,7 @@ const App = new GameService({
 });
 App.loader
   .add("button", "../../static/assets/buttons_4x.json")
-  .add("fullBlackWindow", "../../static/assets/GUI_4x.json")
+  .add("gui", "../../static/assets/GUI_4x.json")
   .load(start);
 
 function start(): void {
