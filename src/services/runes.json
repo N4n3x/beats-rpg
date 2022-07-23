@@ -1,0 +1,72 @@
+{
+  "runes": {
+    "heart": {
+      "icon": "icon_heart",
+      "name": "Heart"
+    },
+    "soul": {
+      "icon": "icon_soul",
+      "name": "Soul"
+    },
+    "diamond": {
+      "icon": "icon_diamond",
+      "name": "Diamond"
+    },
+    "strength": {
+      "icon": "icon_strength",
+      "name": "Strength"
+    },
+    "lightning": {
+      "icon": "icon_lightning",
+      "name": "Lightning"
+    },
+    "luck": {
+      "icon": "icon_luck",
+      "name": "Luck"
+    },
+    "armor": {
+      "icon": "icon_armor",
+      "name": "Armor"
+    },
+    "block": {
+      "icon": "icon_block",
+      "name": "Block"
+    },
+    "view": {
+      "icon": "icon_view",
+      "name": "View"
+    },
+    "silver": {
+      "icon": "icon_silver",
+      "name": "Silver"
+    },
+    "gold": {
+      "icon": "icon_gold",
+      "name": "Gold"
+    },
+    "diamond": {
+      "icon": "icon_diamond",
+      "name": "Diamond"
+    },
+    "key": {
+      "icon": "icon_key",
+      "name": "Key"
+    },
+    "skull": {
+      "icon": "icon_skull",
+      "name": "Skull"
+    },
+    "bag": {
+      "icon": "icon_bag",
+      "name": "Bag"
+    },
+    "parchment": {
+      "icon": "icon_parchment",
+      "name": "Parchment"
+    },
+    "shop": {
+      "icon": "icon_shop",
+      "name": "Shop"
+    }
+  }
+}
