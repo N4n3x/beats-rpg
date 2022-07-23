@@ -11,7 +11,7 @@
     "lint": "vite lint",
     "watch": "vite watch",
     "serve": "vite serve",
-    "debug": "vite --port=4000"
+    "debug": "vite --port=4000 --open"
   },
   "dependencies": {
     "pixi.js": "^6.4.2",
