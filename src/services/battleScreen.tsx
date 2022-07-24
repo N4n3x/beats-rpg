@@ -3,6 +3,8 @@ import GameService from './gameService';
 import windowGenerator from './windowGenerator';
 import buttonGenerator from './buttonGenerator';
 import RuneGenerator from './runeGenerator';
+import Rune from './rune';
+import Deck from './deck';
 
 function BattleScreen(App: GameService): Container {
     const container = new Container();
@@ -26,36 +28,15 @@ function BattleScreen(App: GameService): Container {
     deckWindow.y = container.height - deckWindow.height;
     container.addChild(deckWindow);
 
-    const rune1 = RuneGenerator("icon_heart", App);
-    rune1.x = 32 + 8;
-    rune1.y = 64 - 16;
-    deckWindow.addChild(rune1);
-
-    const rune2 = RuneGenerator("icon_soul", App);
-    rune2.x = rune1.x + rune1.width + 16;
-    rune2.y = 64 - 16;
-    deckWindow.addChild(rune2);
-
-    const rune3 = RuneGenerator("icon_strength", App);
-    rune3.x = rune2.x + rune2.width + 16;
-    rune3.y = 64 - 16;
-    deckWindow.addChild(rune3);
-
-    const rune4 = RuneGenerator("icon_lightning", App);
-    rune4.x = rune3.x + rune3.width + 16;
-    rune4.y = 64 - 16;
-    deckWindow.addChild(rune4);
-
-    const rune5 = RuneGenerator("icon_luck", App);
-    rune5.x = rune4.x + rune4.width + 16;
-    rune5.y = 64 - 16;
-    deckWindow.addChild(rune5);
-
-    const rune6 = RuneGenerator("icon_armor", App);
-    rune6.x = rune5.x + rune5.width + 16;
-    rune6.y = 64 - 16;
-    deckWindow.addChild(rune6);
-
+    const deck = new Deck(App, deckWindow);
+    deck.drawRunes(6);
+    deck.render();
+    App.ticker.add((d) => {
+        deck.drawRunes(1);
+        deck.render();
+        // console.log(d);
+        
+    });
     return container;
 }
 
