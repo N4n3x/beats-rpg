@@ -6,18 +6,19 @@ import runes from "./runes.json";
 const HAND_MAX_SIZE = 6;
 type ObjectKey = keyof typeof runes.runes | null;
 
-class Deck {
+class Deck extends Container {
     public runes: Array<Rune>;
     public hand: Array<Rune>;
     public renderTarget: Container;
 
     constructor(App: GameService,renderTarget: Container) {
+        super();
         this.runes = [];
         this.hand = [];
         this.renderTarget = renderTarget;
         const keys = Object.keys(runes.runes) as Array<ObjectKey>;
         keys.forEach(key => {
-            this.runes.push(new Rune(App, key));
+            this.runes.push(new Rune(App, this, key));
         });
     }
 
@@ -30,27 +31,32 @@ class Deck {
         return this;
     }
 
-    public drawRune(): Rune | null {
+    public drawRunes(number: number): Rune | null {
+        let numberToDraw = number -1;
+        let rune: Rune | null = null;
         if(this.hand.length < HAND_MAX_SIZE){
             let randIndex = [];
             for(let i = 0; i < this.runes.length; i++){
                 randIndex.push(i);
             }
             randIndex = randIndex.sort(() => Math.random() - 0.5);
-            let rune: Rune | null = null;
+            
             for(let i = 0; i < randIndex.length; i++){
                 rune = this.runes[randIndex[i]];
                 if(this.hand.includes(rune)){
                     continue;
                 }else{
                     this.hand.push(rune);
-                    break;
+                    numberToDraw--;
+                    if(numberToDraw <= 0){
+                        break;
+                    }else{
+                        continue;
+                    }
                 }
             }   
-            return rune;
-        }else{
-            return null;
         }
+        return rune;
     }
 
 
