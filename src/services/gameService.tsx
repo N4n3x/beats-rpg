@@ -25,19 +25,4 @@ class GameService extends Application {
     }
 }
 
-// const App = new GameService({
-//     width: 360,
-//     height: 640,
-//     antialias: true,
-//     resolution: 1,
-// });
-// // settings.SCALE_MODE = SCALE_MODES.NEAREST;
-// App.loader.add("button", "../../static/assets/buttons_4x.json")
-//     .add("fullBlackWindow", "../../static/assets/GUI_4x.json")
-//     .load(start);
-
-// function start(): void{ 
-//     App.router("startScreen");
-// }
-
 export default GameService;
