@@ -1,6 +1,7 @@
 import GameService from "./gameService";
 import { Container, Sprite } from "pixi.js";
 import runes from "./runes.json";
+import Deck from "./deck";
 
 interface IRune {
     name: string;
@@ -13,8 +14,9 @@ class Rune extends Sprite {
     public data: IRune;
     public title: string;
     public icon: Sprite;
+    public context: Container | Deck;
 
-    constructor(App: GameService, key: ObjectKey = null) {
+    constructor(App: GameService, context: Container, key: ObjectKey = null) {
         super(App.loader.resources["gui"]!.spritesheet!.textures["background_parchment"]);
         if(key === null){
             this.key = this.setRandomRune();
@@ -25,6 +27,10 @@ class Rune extends Sprite {
         this.title = this.data.name;
         this.icon = new Sprite(App.loader.resources["gui"]!.spritesheet!.textures[this.data.icon]);
         this.addChild(this.icon);
+        this.interactive = true;
+        this.buttonMode = true;
+        this.context = context;
+        this.on("pointerdown", this.onClick);
     }
 
     // public set(name: string): Rune {
@@ -45,6 +51,12 @@ class Rune extends Sprite {
     setRandomRune(): ObjectKey {
         const keys: Array<string> = Object.keys(runes.runes);
         return keys[Math.floor(Math.random() * keys.length)] as ObjectKey;
+    }
+
+    onClick(): void {
+        if("hand" in this.context){
+            this.context.hand.splice(this.context.hand.indexOf(this), 1);
+        }
     }
 }
 
