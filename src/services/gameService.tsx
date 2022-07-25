@@ -2,12 +2,15 @@ import { Application, IApplicationOptions, Sprite, settings, SCALE_MODES, Graphi
 import StartScreen from './startScreen';
 import BattleScreen from './battleScreen';
 
+const TICK_INTERVAL = 240;
 interface IGameService extends Application {
     router: (screen: string) => void;
 }
 class GameService extends Application {
+    public tickInterval: number;
     constructor(options: IApplicationOptions) {
         super(options);
+        this.tickInterval = TICK_INTERVAL;
     }
     
     public router(screenName: string): void{
