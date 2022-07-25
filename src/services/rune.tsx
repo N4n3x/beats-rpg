@@ -55,7 +55,7 @@ class Rune extends Sprite {
 
     onClick(): void {
         if("hand" in this.context){
-            this.context.hand.splice(this.context.hand.indexOf(this), 1);
+            this.context.removeRune(this);
         }
     }
 }
