@@ -1,4 +1,4 @@
-import {Application, Container, Loader, TextStyle, Sprite} from 'pixi.js'
+import {Application, Graphics, Container, Loader, TextStyle, Sprite, Text} from 'pixi.js'
 import GameService from './gameService';
 import windowGenerator from './windowGenerator';
 import buttonGenerator from './buttonGenerator';
@@ -7,37 +7,53 @@ import Rune from './rune';
 import Deck from './deck';
 
 function BattleScreen(App: GameService): Container {
-    const container = new Container();
     const style = new TextStyle({
         fontFamily: "Minecraft"
     });
-
-    const windowContainer = windowGenerator("parchment", 11, 18, App.loader);
-    windowContainer.x = App.screen.width / 2 - windowContainer.width / 2;
-    windowContainer.y = 74 
-    container.addChild(windowContainer);
+    const windowContainer = windowGenerator("parchment", 12, 20, App.loader);
 
     const iconMenu = new Sprite(App.loader.resources["button"]!.spritesheet!.textures["buttons_4x14.png"]);
     const buttonMenu = buttonGenerator("normal", 2, iconMenu, () => {App.router("startScreen")}, App.loader);
     buttonMenu.x = 5;
     buttonMenu.y = 5;
-    container.addChild(buttonMenu);
+    windowContainer.addChild(buttonMenu);
 
-    const deckWindow = windowGenerator("littleWood1", 11, 4, App.loader);
-    deckWindow.x = App.screen.width / 2 - deckWindow.width / 2;
-    deckWindow.y = container.height - deckWindow.height;
-    container.addChild(deckWindow);
-
-    const deck = new Deck(App, deckWindow);
+    const deck = new Deck(App);
+    deck.x = App.screen.width / 2 - deck.width / 2;
+    deck.y = windowContainer.height - deck.height;
+    windowContainer.addChild(deck);
+    // const deck = new Deck(App);
+    // const test = windowGenerator("littleWood1", 11, 4, App.loader)
+    // deck.addChild(test);
+    // const test = deck.contructHand();
+    // deck.x = 0;
+    // deck.y = 517;
+    // windowContainer.addChild(deck);
+    // // windowContainer.addChild(test);
+    
     deck.drawRunes(6);
-    deck.render();
+    let timer = 0;
+    let second = 4;
+    const textTimer = new Text(second, style)
+    textTimer.x = 16;
+    textTimer.y = windowContainer.height - 0 - textTimer.height;
+    windowContainer.addChild(textTimer);
     App.ticker.add((d) => {
-        deck.drawRunes(1);
-        deck.render();
-        // console.log(d);
-        
+        timer ++;
+        textTimer.text = second + "";
+        if(timer % 60 === 0){
+            second --;
+            // console.log(timer);
+        }
+        if (timer === App.tickInterval ) {
+            timer = 0;
+            deck.drawRunes(1);
+            console.log("turn");
+            second = 4;
+            
+        }
     });
-    return container;
+    return windowContainer;
 }
 
 export default BattleScreen;

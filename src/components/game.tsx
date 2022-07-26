@@ -3,7 +3,7 @@ import React, { useRef, useLayoutEffect, useEffect } from "react";
 import GameService from "../services/gameService";
 
 const App = new GameService({
-  width: 360,
+  width: 384,
   height: 640,
   antialias: true,
   resolution: 1,

@@ -22,7 +22,7 @@ const StartScreen = (App: GameService): Container => {
     const style = new TextStyle({
         fontFamily: "Minecraft"
     });
-    const windowContainer = windowGenerator("fullBlack", 9, 16,App.loader);
+    const windowContainer = windowGenerator("fullBlack", 12, 20, App.loader);
     windowContainer.x = App.screen.width / 2 - windowContainer.width / 2;
     windowContainer.y = App.screen.height / 2 - windowContainer.height / 2; 
     container.addChild(windowContainer);
