@@ -1,0 +1,304 @@
+{
+    "frames": {
+      "fullBlackWindow_topLeft": {
+        "frame": { "x": 0, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_topMid": {
+        "frame": { "x": 32, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_topRight": {
+        "frame": { "x": 64, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_midLeft": {
+        "frame": { "x": 0, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_midMid": {
+        "frame": { "x": 32, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_midRight": {
+        "frame": { "x": 64, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_botLeft": {
+        "frame": { "x": 0, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_botMid": {
+        "frame": { "x": 32, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "fullBlackWindow_botRight": {
+        "frame": { "x": 64, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_topLeft": {
+        "frame": { "x": 384, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_topMid": {
+        "frame": { "x": 416, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_topRight": {
+        "frame": { "x": 448, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_midLeft": {
+        "frame": { "x": 384, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_midMid": {
+        "frame": { "x": 416, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_midRight": {
+        "frame": { "x": 448, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_botLeft": {
+        "frame": { "x": 384, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_botMid": {
+        "frame": { "x": 416, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "parchmentWindow_botRight": {
+        "frame": { "x": 448, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_topLeft": {
+        "frame": { "x": 0, "y": 128, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_topMid": {
+        "frame": { "x": 32, "y": 128, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_topRight": {
+        "frame": { "x": 64, "y": 128, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_midLeft": {
+        "frame": { "x": 0, "y": 160, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_midMid": {
+        "frame": { "x": 32, "y": 160, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_midRight": {
+        "frame": { "x": 64, "y": 160, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_botLeft": {
+        "frame": { "x": 0, "y": 192, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_botMid": {
+        "frame": { "x": 32, "y": 192, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "littleWoodWindow_botRight": {
+        "frame": { "x": 64, "y": 192, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_topLeft": {
+        "frame": { "x": 128, "y": 224, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_topMid1": {
+        "frame": { "x": 160, "y": 224, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_topMid2": {
+        "frame": { "x": 192, "y": 224, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_topRight": {
+        "frame": { "x": 224, "y": 224, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_midLeft1": {
+        "frame": { "x": 128, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_midMid": {
+        "frame": { "x": 160, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_midRight1": {
+        "frame": { "x": 224, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_midLeft2": {
+        "frame": { "x": 128, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_midRight2": {
+        "frame": { "x": 224, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_botLeft": {
+        "frame": { "x": 128, "y": 320, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_botMid1": {
+        "frame": { "x": 160, "y": 320, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_botMid2": {
+        "frame": { "x": 192, "y": 320, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "wood2Window_botRight": {
+        "frame": { "x": 224, "y": 320, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_sword": {
+        "frame": { "x": 480, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_shield": {
+        "frame": { "x": 480, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_spear": {
+        "frame": { "x": 480, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_axe": {
+        "frame": { "x": 480, "y": 96, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_helmet": {
+        "frame": { "x": 512, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_armor": {
+        "frame": { "x": 512, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_pants": {
+        "frame": { "x": 512, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_boots": {
+        "frame": { "x": 512, "y": 96, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_bigAxe": {
+        "frame": { "x": 544, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_dagger": {
+        "frame": { "x": 544, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_bow": {
+        "frame": { "x": 544, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_staff": {
+        "frame": { "x": 544, "y": 96, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_earring": {
+        "frame": { "x": 576, "y": 0, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_ring": {
+        "frame": { "x": 576, "y": 32, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_necklace": {
+        "frame": { "x": 576, "y": 64, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "itemIcon_amulet": {
+        "frame": { "x": 576, "y": 96, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_heart": {
+        "frame": { "x": 256, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_soul": {
+        "frame": { "x": 288, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_strength": {
+        "frame": { "x": 320, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_lightning": {
+        "frame": { "x": 352, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_luck": {
+        "frame": { "x": 384, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_armor": {
+        "frame": { "x": 416, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_block": {
+        "frame": { "x": 448, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_view": {
+        "frame": { "x": 480, "y": 256, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_silver": {
+        "frame": { "x": 256, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_gold": {
+        "frame": { "x": 288, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_diamond": {
+        "frame": { "x": 320, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_key": {
+        "frame": { "x": 352, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_skull": {
+        "frame": { "x": 384, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_bag": {
+        "frame": { "x": 416, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_parchment": {
+        "frame": { "x": 448, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "icon_shop": {
+        "frame": { "x": 480, "y": 288, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      },
+      "background_parchment": {
+        "frame": { "x": 384, "y": 96, "w": 32, "h": 32 },
+        "sourceSize": { "w": 32, "h": 32 }
+      }
+    },
+    "meta": {
+      "app": "https://github.com/piskelapp/piskel/",
+      "version": "1.0",
+      "image": "GUI_4x.png",
+      "format": "RGBA8888",
+      "size": { "w": 448, "h": 608 }
+    }
+  }
+  
