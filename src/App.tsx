@@ -2,7 +2,7 @@ import { useState } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import Game from './components/game'
-import "../static/fonts/Minecraft.ttf";
+import "/fonts/Minecraft.ttf";
 
 function App() {
   const [count, setCount] = useState(0)

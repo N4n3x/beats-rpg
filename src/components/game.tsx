@@ -9,11 +9,13 @@ const App = new GameService({
   resolution: 1,
 });
 App.loader
-  .add("button", "../../static/assets/buttons_4x.json")
-  .add("gui", "../../static/assets/GUI_4x.json")
+  .add("button", `../..${import.meta.env.BASE_URL}assets/buttons_4x.json`)
+  .add("gui", `../..${import.meta.env.BASE_URL}assets/GUI_4x.json`)
   .load(start);
 
 function start(): void {
+  console.log(import.meta.env);
+  
   App.router("startScreen");
 }
 

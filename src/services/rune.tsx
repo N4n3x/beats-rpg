@@ -33,16 +33,6 @@ class Rune extends Sprite {
         this.on("pointerdown", this.onClick);
     }
 
-    // public set(name: string): Rune {
-    //     this.icon = icon;
-    //     return this;
-    // }
-
-    // public setBackground(background: string): Rune {
-    //     this.sprite.texture = GameService.loader.resources[background].texture;
-    //     return this;
-    // }
-
     public getRunesListe(): Array<ObjectKey> {
         const keys = Object.keys(runes.runes) as Array<ObjectKey>;
         return keys;
@@ -54,8 +44,9 @@ class Rune extends Sprite {
     }
 
     onClick(): void {
-        if("hand" in this.context){
-            this.context.removeRune(this);
+        // TODO: Trouver une autre méthode pour récupérer le container parent
+        if("hand" in this.context && "lane" in this.context){
+            this.context.handToLane(this);
         }
     }
 }

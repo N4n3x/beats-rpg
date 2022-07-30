@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Minecraft";
   src: local("Minecraft"),
-   url("../static/fonts/Minecraft.ttf") format("truetype");
+   url("/fonts/Minecraft.ttf") format("truetype");
   font-weight: bold;
   }
 
