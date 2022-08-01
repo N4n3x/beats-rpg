@@ -1,8 +1,9 @@
-import { Container } from "pixi.js";
+import { Container, Sprite } from "pixi.js";
 import GameService from "./gameService";
 import windowGenerator from "./windowGenerator";
 import Rune from "./rune";
 import runes from "./runes.json";
+import { nextTick } from "process";
 
 const HAND_MAX_SIZE = 6;
 const LANE_MAX_SIZE = 5;
@@ -11,12 +12,13 @@ class Deck extends Container {
   public handWindow: Container;
   public laneWindow: Container;
   public hand: Rune[] = [];
-  public lane: Rune[] = [];
+  public lane: Array<Rune|Sprite> = [];
   public runes: Rune[];
+  public emptyRune: Sprite;
   constructor(App: GameService) {
     super();
     // LANE
-    this.laneWindow = windowGenerator("littleWood1", 3, 7, App.loader);
+    this.laneWindow = windowGenerator("littleWood1", 3, 10, App.loader);
     this.laneWindow.x = 0;
     this.laneWindow.y = 0;
     this.addChild(this.laneWindow);
@@ -31,6 +33,20 @@ class Deck extends Container {
     keys.forEach((key) => {
       this.runes.push(new Rune(App, this, key));
     });
+    this.emptyRune = new Sprite(App.loader.resources["gui"]!.spritesheet!.textures["background_parchment"]);
+    for(let i = 0; i < LANE_MAX_SIZE; i++){
+      this.lane.push(new Sprite(this.emptyRune.texture));
+    }
+  }
+
+  public removeRuneToHand(rune: Rune): Deck {
+    if (this.hand.includes(rune)) {
+      this.hand.splice(this.hand.indexOf(rune), 1);
+      this.renderWindows();
+    } else {
+      console.log("Rune not found");
+    }
+    return this;
   }
 
   public addRuneToHand(rune: Rune): Deck {
@@ -72,27 +88,25 @@ class Deck extends Container {
   }
 
   public handToLane(rune: Rune): Deck {
-    if (this.lane.length < LANE_MAX_SIZE) {
-      if (this.hand.includes(rune)) {
-        this.lane.push(rune);
-        this.removeRune(rune);
+    for(let i = 0; i < LANE_MAX_SIZE; i++){
+      if(this.lane[i] instanceof Rune){
+        continue;
+      }else{
+        this.lane[i] = rune;
+        this.removeRuneToHand(rune);
         this.renderWindows();
-      } else {
-        console.log("Rune not found");
+        return this;
       }
-    }else{
-        console.log("Lane is full");
     }
+    console.log("Lane is full");
     return this;
   }
 
-  public removeRune(rune: Rune): Deck {
-    if (this.hand.includes(rune)) {
-      this.hand.splice(this.hand.indexOf(rune), 1);
-      this.renderWindows();
-    } else {
-      console.log("Rune not found");
-    }
+  public laneOnTurn(): Deck {
+    const tempLane = [...this.lane];
+    this.lane.pop();
+    this.lane.unshift(new Sprite(this.emptyRune.texture));
+    this.renderWindows();
     return this;
   }
 
@@ -103,15 +117,16 @@ class Deck extends Container {
   }
 
   public renderLane(): Deck {
+    // TODO: Refactor this
     this.laneWindow.children.forEach((element) => {
       if (element instanceof Rune) {
         this.laneWindow.removeChild(element);
       }
     });
-    for (let i = 0; i < this.lane.length; i++) {
+    for (let i = 0; i < LANE_MAX_SIZE; i++) {
       this.laneWindow.addChild(this.lane[i]);
       if (i === 0) {
-        this.lane[i].y = 56;
+        this.lane[i].y = 48;
       } else {
         this.lane[i].y = this.lane[i - 1].y + this.lane[i - 1].height + 16;
       }

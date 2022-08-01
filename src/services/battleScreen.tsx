@@ -39,7 +39,8 @@ function BattleScreen(App: GameService): Container {
         if (timer === App.tickInterval ) {
             timer = 0;
             deck.drawRunes(1);
-            console.log("turn");
+            console.log("turn", deck.lane[4]?.name || "empty");
+            deck.laneOnTurn();
             second = 4;
             
         }
