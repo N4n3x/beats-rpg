@@ -3,14 +3,29 @@ import StartScreen from './startScreen';
 import BattleScreen from './battleScreen';
 
 const TICK_INTERVAL = 240;
+const options: IApplicationOptions = {
+    width: 384,
+    height: 640,
+    antialias: true,
+    resolution: 1,
+};
 interface IGameService extends Application {
     router: (screen: string) => void;
 }
 class GameService extends Application {
+    private static instance: GameService; 
     public tickInterval: number;
-    constructor(options: IApplicationOptions) {
+
+    private constructor() {
         super(options);
         this.tickInterval = TICK_INTERVAL;
+    }
+
+    public static getInstance(): GameService {
+        if (!GameService.instance) {
+            GameService.instance = new GameService();
+        }
+        return GameService.instance;
     }
     
     public router(screenName: string): void{

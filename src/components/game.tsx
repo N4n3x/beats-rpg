@@ -2,12 +2,7 @@
 import React, { useRef, useLayoutEffect, useEffect } from "react";
 import GameService from "../services/gameService";
 
-const App = new GameService({
-  width: 384,
-  height: 640,
-  antialias: true,
-  resolution: 1,
-});
+const App = GameService.getInstance();
 App.loader
   .add("button", `../..${import.meta.env.BASE_URL}assets/buttons_4x.json`)
   .add("gui", `../..${import.meta.env.BASE_URL}assets/GUI_4x.json`)
