@@ -5,11 +5,14 @@ import buttonGenerator from './buttonGenerator';
 import RuneGenerator from './runeGenerator';
 import Rune from './rune';
 import Deck from './deck';
+import GameLoop from './gameLoop';
 
 function BattleScreen(App: GameService): Container {
     const style = new TextStyle({
         fontFamily: "Minecraft"
     });
+    const gameLoop = GameLoop.getInstance();
+    gameLoop.loop();
     const windowContainer = windowGenerator("parchment", 12, 20, App.loader);
 
     const iconMenu = new Sprite(App.loader.resources["button"]!.spritesheet!.textures["buttons_4x14.png"]);
